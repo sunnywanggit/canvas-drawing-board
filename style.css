@@ -1,0 +1,61 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+/*common css */
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* canvas */
+
+.wrapping {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+
+.wrapping .tools{
+    width: 100vw;
+    border: 1px solid red;
+    position: absolute;
+}
+
+.wrapping .tools div{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.wrapping .tools div .iconfont{
+    font-size: 26px;
+}
+
+.wrapping .tools .empty span{
+    color: red;
+}
+
+.wrapping .tools .download span{
+    color: #438afb;
+}
+
+.wrapping .tools .color {
+    display: inline-block;
+}
+
+.wrapping .tools .erase
+
+.wrapping #canvas{
+    width: 100vw;
+    height: 100vh;
+}
