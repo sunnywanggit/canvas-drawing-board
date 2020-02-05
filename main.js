@@ -5,11 +5,21 @@ const canvas = document.getElementById("canvas");
 const empty = document.getElementsByClassName("empty")[0];
 const tools = document.getElementsByClassName("tools")[0];
 const download = document.getElementsByClassName("download")[0];
+const eraser = document.getElementsByClassName('eraser')[0]
+const pen = document.getElementsByClassName('pen')[0]
 
+
+//橡皮擦功能
+eraser.onclick = function(){
+  canvas.classList.add('eraser-cursor')
+  ctx.strokeStyle = 'white'
+}
+
+
+//调节画笔颜色
 const red = document.getElementsByClassName('red')[0]
 const green = document.getElementsByClassName('green')[0]
 const black = document.getElementsByClassName('black')[0]
-const blue = document.getElementsByClassName('blue')[0]
 
 
 canvas.width = document.documentElement.clientWidth;
@@ -110,7 +120,3 @@ black.onclick = function(){
     ctx.strokeStyle = 'black'
 }
 
-blue.onclick = function(){
-    ctx.strokeStyle = 'blue'
-
-}

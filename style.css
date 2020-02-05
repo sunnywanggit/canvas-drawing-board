@@ -5,16 +5,22 @@
   box-sizing: border-box;
 }
 
-ol,ul{
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 /*common css */
 
-.clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.eraser-cursor {
+  cursor: url("eraser.ico"), auto;
 }
 
 /* canvas */
@@ -26,36 +32,53 @@ ol,ul{
   position: relative;
 }
 
-.wrapping .tools{
-    width: 100vw;
-    border: 1px solid red;
-    position: absolute;
+.wrapping .tools {
+  width: 100vw;
+  height: 30px;
+  border: 1px solid red;
+  position: absolute;
+  align-items: center;
 }
 
-.wrapping .tools div{
-    display: inline-block;
-    margin-left: 10px;
+.wrapping .tools div {
+  display: inline-block;
+  margin-left: 10px;
 }
 
-.wrapping .tools div .iconfont{
-    font-size: 26px;
+.wrapping .tools div .iconfont {
+  font-size: 26px;
 }
 
-.wrapping .tools .empty span{
-    color: red;
+.wrapping .tools .empty span {
+  color: red;
 }
 
-.wrapping .tools .download span{
-    color: #438afb;
+.wrapping .tools .download span {
+  color: #438afb;
 }
 
 .wrapping .tools .color {
-    display: inline-block;
+  display: inline-block;
 }
 
-.wrapping .tools .erase
+.wrapping .tools .color span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
 
-.wrapping #canvas{
-    width: 100vw;
-    height: 100vh;
+.wrapping .tools .pen {
+  height: 30px;
+  border: 1px solid red;
+}
+
+.wrapping .tools .eraser {
+  border: 1px solid black;
+  height: 30px;
+}
+
+.wrapping #canvas {
+  width: 100vw;
+  height: 100vh;
 }
