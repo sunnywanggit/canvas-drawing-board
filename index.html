@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="style.css"/>
     <link
-      rel="stylesheet"
-      href="https://at.alicdn.com/t/font_1626648_ese045i0aah.css"
+            rel="stylesheet"
+            href="https://at.alicdn.com/t/font_1626648_42vzoki6ny.css"
     />
     <title>canvas画板</title>
-  </head>
-  <body>
-    <div class="wrapping">
-      <div class="tools clearfix">
+</head>
+<body>
+<!--我发现一个问题，就是不能在画布的根元素上加clearfix，否则页面的地步始终会出现一道空白-->
+<div class="wrapping">
+    <div class="tools clearfix">
         <div class="empty">
-          <span class="iconfont icon-qingkong"></span>
+            <span class="iconfont icon-qingkong"></span>
         </div>
         <div class="download">
-          <span class="iconfont icon-xiazai"></span>
+            <span class="iconfont icon-xiazai"></span>
         </div>
-        <div class="color">
-
-                <span class="black" style="background-color: black;"></span>
-                <span class="red" style="background-color: red;"></span>
-                <span class="green" style="background-color: green;"></span>
-                <span class="green" style="background-color:blue;"></span>
-      </div>
-      <div class="pen">
-        <span class="iconfont icon-pen" style="color: #e85d32;"></span>
-      </div>
-      <div class="eraser">
-          <span class="iconfont icon-eraser" style="color: #262626;"></span>
-      </div>
     </div>
-      <canvas id="canvas"></canvas>
+    <div class="paint">
+        <span class="iconfont icon-pen" style="color:black;"></span>
+        <span class="iconfont icon-pen" style="color:red;"></span>
+        <span class="iconfont icon-pen" style="color:orange;"></span>
+        <span class="iconfont icon-pen" style="color:green;"></span>
+        <span class="iconfont icon-pen" style="color:blue;"></span>
+        <span class="iconfont icon-pen" style="color:violet;"></span>
+        <span class="iconfont icon-eraser" style="color: #d4d5d5;"></span>
     </div>
+    <canvas id="canvas">aaa</canvas>
+</div>
 
-    <script src="main.js"></script>
-  </body>
+<script src="main.js"></script>
+</body>
 </html>

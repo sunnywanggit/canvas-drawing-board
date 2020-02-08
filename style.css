@@ -1,84 +1,95 @@
 /* css reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 /*common css */
 
 .clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
 
 .eraser-cursor {
-  cursor: url("eraser.ico"), auto;
+    cursor: url("eraser.ico"), auto;
 }
 
 /* canvas */
 
 .wrapping {
-  width: 100vw;
-  height: 100vh;
-  margin: auto;
-  position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: relative;
 }
 
 .wrapping .tools {
-  width: 100vw;
-  height: 30px;
-  border: 1px solid red;
-  position: absolute;
-  align-items: center;
+    right: 10px;
+    top: 4px;
+    position: absolute;
 }
 
 .wrapping .tools div {
-  display: inline-block;
-  margin-left: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .wrapping .tools div .iconfont {
-  font-size: 26px;
+    font-size: 36px;
 }
 
 .wrapping .tools .empty span {
-  color: red;
+    color: red;
 }
 
 .wrapping .tools .download span {
-  color: #438afb;
+    color: #438afb;
 }
 
-.wrapping .tools .color {
-  display: inline-block;
+.wrapping .paint {
+    height: 70px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 50%;
+    margin-left: -201px;
+    /*border: 1px solid red;*/
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.05);
+
 }
 
-.wrapping .tools .color span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+.wrapping .paint .color {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
 }
 
-.wrapping .tools .pen {
-  height: 30px;
-  border: 1px solid red;
+.wrapping .paint .icon-pen {
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.wrapping .tools .eraser {
-  border: 1px solid black;
-  height: 30px;
+.wrapping .paint .icon-eraser {
+    font-size: 50px;
 }
+
 
 .wrapping #canvas {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
