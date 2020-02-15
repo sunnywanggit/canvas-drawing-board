@@ -19,9 +19,6 @@ ul {
 }
 
 
-.eraser-cursor {
-    cursor: url("eraser.ico"), auto;
-}
 
 /* canvas */
 
@@ -30,6 +27,7 @@ ul {
     height: 100vh;
     margin: auto;
     position: relative;
+    overflow: hidden;
 }
 
 .wrapping .tools {
