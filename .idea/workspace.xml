@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0806fd2-d58d-4790-98bd-2249fc800b5b" name="Default Changelist" comment="" />
+    <list default="true" id="c0806fd2-d58d-4790-98bd-2249fc800b5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eraser.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,12 +14,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="45" />
-    <option name="y" value="39" />
-    <option name="width" value="1376" />
-    <option name="height" value="837" />
   </component>
   <component name="ProjectId" id="1XqUUeyBhVwctzaId1WLWbCRxzi" />
   <component name="PropertiesComponent">
@@ -56,6 +54,8 @@
       <workItem from="1581773137414" duration="416000" />
       <workItem from="1581776286875" duration="594000" />
       <workItem from="1581779264482" duration="8047000" />
+      <workItem from="1581817354399" duration="823000" />
+      <workItem from="1583938491702" duration="304000" />
     </task>
     <servers />
   </component>
