@@ -6,7 +6,6 @@
 }
 body{
     overflow: hidden;
-    background-color: blanchedalmond;
 }
 
 ol,
@@ -22,7 +21,17 @@ ul {
     clear: both;
 }
 
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 
+.active {
+    fill: deepskyblue;
+    transform: scale(1.2);
+}
 
 /* canvas */
 
@@ -35,60 +44,33 @@ ul {
 }
 
 .wrapping .tools {
-    right: 10px;
-    top: 4px;
+    left: 10px;
+    top: 10px;
     position: absolute;
 }
-
-.wrapping .tools div {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.wrapping .tools div .iconfont {
+.wrapping .tools .icon{
     font-size: 36px;
+    margin-bottom: 4px;
 }
 
-.wrapping .tools .empty span {
-    color: red;
-}
-
-.wrapping .tools .download span {
-    color: #438afb;
-}
-
-.wrapping .paint {
-    height: 70px;
+.wrapping .color{
     position: absolute;
     display: inline-block;
-    bottom: 0;
-    left: 50%;
-    margin-left: -201px;
-    /*border: 1px solid red;*/
+    left: 10px;
     text-align: center;
     align-items: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.05);
-
+    top: 50%;
+    transform:translateY(-50%);
 }
 
-.wrapping .paint .color {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
+.color span:not(:last-child){
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-bottom: 8px;
 }
 
-.wrapping .paint .icon-pen {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.wrapping .paint .icon-eraser {
-    font-size: 50px;
-}
 
 
 .wrapping #canvas {
