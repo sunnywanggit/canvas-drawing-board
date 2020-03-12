@@ -70,7 +70,16 @@ ul {
     border-radius: 50%;
     margin-bottom: 8px;
 }
-
+.pen-earse{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+}
+.pen-earse .icon{
+    display: block;
+    margin-bottom: 8px;
+}
 
 
 .wrapping #canvas {

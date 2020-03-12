@@ -24,6 +24,9 @@ var eraserEnabled = false;
 
 var lineWidth = 5
 
+let painting = false;
+let currentColor = 'black'
+
 class Canvas {
 
     constructor() {
@@ -52,7 +55,6 @@ class Canvas {
 
     //初始化笔刷
     initBrush() {
-        let painting = false;
         let lastPoint = {
             x: undefined,
             y: undefined
@@ -122,7 +124,15 @@ class Canvas {
         function drawLine(x1, y1, x2, y2) {
             ctx.beginPath();
             ctx.moveTo(x1, y1)
-            ctx.lineWidth = lineWidth;
+            ctx.strokeStyle = currentColor
+            ctx.fillStyle = currentColor
+            if(eraserEnabled){
+                ctx.lineWidth =40;
+                ctx.strokeStyle = 'white'
+                ctx.fillStyle = 'white'
+            }else{
+                ctx.lineWidth = lineWidth
+            }
             ctx.lineTo(x2, y2)
             ctx.stroke();
             ctx.closePath();
@@ -136,13 +146,18 @@ class Canvas {
     }
 
     bindEvents() {
+        pen.onclick = function(){
+            pen.classList.add('active')
+            eraser.classList.remove('active')
+            eraserEnabled = false
+        }
+
         //橡皮擦功能
-        // eraser.onclick = function () {
-        //   eraserEnabled = true
-        //   canvas.classList.add('eraser-cursor')
-        //   ctx.lineWidth = 100
-        //   ctx.strokeStyle = 'white'
-        // }
+        eraser.onclick = function () {
+            eraserEnabled = true
+            pen.classList.remove('active')
+            eraser.classList.add('active')
+        }
 
         // 清空画面
         empty.onclick = function () {
@@ -180,56 +195,56 @@ class Canvas {
         black.onclick = function () {
             removeActive()
             black.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'black'
             ctx.strokeStyle = 'black'
+            currentColor = 'black'
         }
 
         red.onclick = function () {
             removeActive()
             red.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'red'
             ctx.strokeStyle = 'red'
+            currentColor = 'red'
 
         }
 
         orange.onclick = function () {
             removeActive()
             orange.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'orange'
             ctx.strokeStyle = 'orange'
+            currentColor = 'orange'
         }
 
         green.onclick = function () {
             removeActive()
             green.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'green'
             ctx.strokeStyle = 'green'
+            currentColor = 'green'
         }
 
         blue.onclick = function () {
             removeActive()
             blue.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'blue'
             ctx.strokeStyle = 'blue'
+            currentColor = 'blue'
         }
 
         violet.onclick = function () {
             removeActive()
             violet.classList.add('active')
-            eraserEnabled = false
             canvas.classList.remove('eraser-cursor')
             ctx.fillStyle = 'violet'
             ctx.strokeStyle = 'violet'
+            currentColor = 'violet'
         }
 
     }
